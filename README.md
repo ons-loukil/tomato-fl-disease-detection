@@ -123,9 +123,17 @@ new-plant-diseases-dataset/
 
 The notebooks load **only** the folders whose name contains `Tomato__`, so non-tomato classes in the same archive are ignored automatically.
 
+### Dataset links
+
+- **Dataset used (augmented PlantVillage, `train/` + `valid/` layout):** New Plant Diseases Dataset — Kaggle
+  <https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset>
+  (~87K RGB images, 38 classes at 256×256, pre-split into `train/` and `valid/`; the notebooks use the 10 tomato classes only.)
+- **Original PlantVillage source:** <https://github.com/spMohanty/PlantVillage-Dataset>
+  (Kaggle mirror: <https://www.kaggle.com/datasets/emmarex/plantdisease>)
+
 ### How to obtain the data
 
-1. Download the dataset from: ⟨**add the exact dataset link here** — e.g. the Thonglek et al. augmented PlantVillage source / Mendeley / Kaggle URL you used⟩
+1. Download the dataset from the Kaggle link above.
 2. Extract it so that the `train/` and `valid/` folders sit under a directory named `new-plant-diseases-dataset/` (see layout above), placed next to the notebooks.
 3. If your data lives elsewhere, edit the **path variables at the top of each notebook** — `TRAIN_DIR` / `VALID_DIR` (notebooks `01`, `04`, `05`) or `tomato_train` / `tomato_valid` (notebooks `02`, `03`, `06`).
 
