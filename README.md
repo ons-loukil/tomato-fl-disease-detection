@@ -17,7 +17,7 @@ Key contributions reproduced here:
 
 
 
-## Model architecture — SimpleNetAugDR-3
+## Model architecture : SimpleNetAugDR-3
 
 A deliberately shallow, hardware-aware CNN: three standard convolutional blocks followed by a single dropout-regularised classification head.
 
