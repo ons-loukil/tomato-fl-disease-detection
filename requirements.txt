@@ -1,0 +1,13 @@
+# Core dependencies for the tomato-leaf-disease / federated-learning notebooks.
+# Tested with Python 3.10-3.12 and TensorFlow 2.x (Keras 2 and Keras 3 both work).
+# Pin exact versions if you need byte-for-byte reproducibility.
+
+tensorflow>=2.12        # Keras API, Adam, Conv/MaxPool/Dense, .keras model format
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2       # train_test_split, metrics, classification_report
+matplotlib>=3.6
+seaborn>=0.12           # heatmaps (notebooks 05, 06)
+opencv-python>=4.7      # cv2 image loading/resizing
+Pillow>=9.4             # PIL image handling
+tqdm>=4.64              # progress bars during data loading
