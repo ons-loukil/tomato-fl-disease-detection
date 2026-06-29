@@ -2,7 +2,7 @@
 
 This repository contains the source code and experiments for the paper **"Enhancing Tomato Leaf Disease Detection Using Federated Learning for Efficiency and Privacy Preservation."** It includes the design and evaluation of the lightweight **SimpleNetAugDR-3** CNN and its deployment in a Federated Learning (FedAvg) setting for privacy-preserving, edge-oriented tomato leaf disease classification.
 
----
+
 
 ## Overview
 
@@ -15,7 +15,7 @@ Key contributions reproduced here:
 - Convergence and **Non-IID** (Dirichlet α) robustness studies.
 - A feature-level analysis (Grad-CAM, t-SNE, cosine similarity) of the most-confused class (Septoria Leaf Spot).
 
----
+
 
 ## Model architecture — SimpleNetAugDR-3
 
@@ -37,7 +37,7 @@ Dense  : 10, softmax
 
 The same architecture is used as the local/global model in all federated experiments.
 
----
+
 
 ## Repository structure
 
@@ -55,7 +55,7 @@ All experiments are provided as self-contained Jupyter notebooks, numbered in a 
 └── 06_noniid_experiments.ipynb       # IID vs Non-IID (alpha=0.5, 0.1)            -> Figs 10-15
 ```
 
----
+
 
 ## Notebook → paper results mapping
 
@@ -69,7 +69,7 @@ All experiments are provided as self-contained Jupyter notebooks, numbered in a 
 | `06_noniid_experiments.ipynb` | IID / Non-IID Mild (α=0.5) / Severe (α=0.1) scenarios; per-class F1 on the held-out test set | **Figs 10–15** |
 | Comparison with related work | — | **Table IX** |
 
----
+
 
 ## Evaluation protocol (train / validation / test)
 
@@ -86,7 +86,7 @@ For the federated experiments (`04`–`06`):
 
 > Hyperparameter and round-count *selection* (notebooks `02` and `05`) is performed on the **validation** set; the adopted choice is then confirmed once on the held-out test set.
 
----
+
 
 ## Data
 
@@ -139,7 +139,7 @@ The notebooks load **only** the folders whose name contains `Tomato__`, so non-t
 
 > **Note:** The raw dataset is **not** committed to this repository due to size and licensing. Availability may be subject to the original providers' usage terms. Please refer to the original source for license details.
 
----
+
 
 ## Installation
 
@@ -160,7 +160,7 @@ See `requirements.txt`. Core dependencies:
 - Matplotlib, seaborn
 - opencv-python, Pillow, tqdm
 
----
+
 
 ## Usage
 
@@ -177,13 +177,13 @@ Outputs (CSV tables, figures, saved models) are written to a per-notebook `*_out
 
 > **Reproducibility note.** These notebooks implement a strict train/validation/test separation (final metrics on a held-out test set). Numbers may therefore differ slightly from values obtained under a single-set evaluation; we recommend reporting the held-out-test results produced here.
 
----
+
 
 ## Hardware
 
 All experiments in the paper were conducted on an **Intel(R) Xeon(R) CPU @ 2.20 GHz with 30 GB RAM**. No GPU is required; the lightweight design targets CPU/edge deployment. Reported inference times correspond to this setup. (A GPU will substantially speed up training of the larger pretrained baselines in `01`.)
 
----
+
 
 ## Key results
 
@@ -197,7 +197,7 @@ All experiments in the paper were conducted on an **Intel(R) Xeon(R) CPU @ 2.20 
 
 The proposed model offers the best trade-off between accuracy, inference speed, and model size among all evaluated architectures.
 
----
+
 
 ## Authors
 
